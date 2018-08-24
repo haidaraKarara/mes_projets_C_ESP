@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1490111684 source:e:\cccccc\projet_en_c_dic1\inserermembre.c
+	<stdio.h>
+	<stdlib.h>
+	"insererMembre.h"
+
+1490108406 e:\cccccc\projet_en_c_dic1\inserermembre.h
+
+1490110359 source:e:\cccccc\projet_en_c_dic1\main.c
+	<stdio.h>
+	<stdlib.h>
+	"insererMembre.h"
+

@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1433255101 source:e:\cccccc\exo_en_groupe_amstrong\main.c
+	<stdio.h>
+	<stdlib.h>
+
+1433265340 source:e:\cccccc\somme de deux matrices\main.c
+	<stdio.h>
+	<stdlib.h>
+

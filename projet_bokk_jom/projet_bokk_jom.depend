@@ -1,0 +1,63 @@
+# depslib dependency file v1.0
+1489833349 source:e:\cccccc\projet_bokk_jom\comdenrees.c
+	"comDenrees.h"
+	<stdio.h>
+	<stdlib.h>
+
+1438502238 e:\cccccc\projet_bokk_jom\comdenrees.h
+
+1438500468 source:e:\cccccc\projet_bokk_jom\commateriels.c
+	<stdio.h>
+	<stdlib.h>
+	"comMateriels.h"
+
+1438500744 e:\cccccc\projet_bokk_jom\commateriels.h
+
+1438634662 source:e:\cccccc\projet_bokk_jom\fairecommateriels.c
+	"faireComMateriels.h"
+	<stdio.h>
+	<stdlib.h>
+
+1438502665 e:\cccccc\projet_bokk_jom\fairecommateriels.h
+
+1489835637 source:e:\cccccc\projet_bokk_jom\main.c
+	<stdio.h>
+	<stdlib.h>
+	"Membre.h"
+	"comDenrees.h"
+	"comMateriels.h"
+	"denrees.h"
+	"faireComMateriels.h"
+	"qteComdenrees.h"
+	"qteComMateriels.h"
+
+1489844264 e:\cccccc\projet_bokk_jom\membre.h
+
+1438643707 e:\cccccc\projet_bokk_jom\denrees.h
+
+1438654027 e:\cccccc\projet_bokk_jom\qtecomdenrees.h
+
+1438654190 e:\cccccc\projet_bokk_jom\qtecommateriels.h
+
+1439543609 source:e:\cccccc\projet_bokk_jom\membre.c
+	<stdio.h>
+	<stdlib.h>
+	"Membre.h"
+
+1438654027 source:e:\cccccc\projet_bokk_jom\qtecomdenrees.c
+	"qteComdenrees.h"
+	<stdio.h>
+	<stdlib.h>
+
+1438654269 source:e:\cccccc\projet_bokk_jom\qtecommateriels.c
+	"qteComMateriels.h"
+	<stdio.h>
+	<stdlib.h>
+
+1438776145 source:e:\cccccc\projet_bokk_jom\denrees.c
+	"denrees.h"
+	<stdio.h>
+	<stdlib.h>
+
+1439661914 source:e:\cccccc\projet_bokk_jom\ressources.rc
+

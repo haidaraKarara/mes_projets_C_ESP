@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1432506059 source:e:\cccccc\tp_tableau_fibonacci\main.c
+	<stdio.h>
+	<stdlib.h>
+

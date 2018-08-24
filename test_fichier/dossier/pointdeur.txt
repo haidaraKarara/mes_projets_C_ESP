@@ -1,0 +1,15 @@
+	LES BIBLIOTHEQUES EN C ET LES FONCTIONS QUI Y SONT INCLUES.
+#include <stddef.h>
+/* inclut le fichier stddef.h
+   dans stddef.h on trouve entre autre
+	- ptrdiff_t un type de variable qui est garanti capable
+		    de recevoir le résultat de la différence entre
+		    2 pointeurs */
+
+#include <stdlib.h>
+/* inclut le fichier stdlib.h
+   dans stdlib.h on trouve entre autre
+	- la fonction malloc alloue/réserve de la mémoire
+	- la fonction free libère la mémoire allouée/réservée
+	- size_t un type de variable pour stocker la taille en char
+          d'un objet (une variable, un tableau, etc.) */

@@ -1,0 +1,136 @@
+Langage C
+M GAYE
+19 mai 2015
+CHAPITRE VII : CARACTERES & CHAINES
+1
+École Supérieure Polytechnique Langage C
+1 LE TYPE DE DONNEE CHAR
+En langage C, char est le type de donnée permettant de stocker des caractères
+; char est un type de donnée numérique. Il n’existe pas de méthode
+pour stocker directement des caractères. Chaque caractère possède un équivalent
+en code numérique : c’est le code ASCII (American Standart Code for
+Information Interchange). Ce code attribue les valeurs 0 à 255 aux lettres
+majuscules et minuscules, aux chiffres, aux marques de ponctuation et aux
+autres symboles. Par exemple, 97 est l’équivalent de la lettre a. Stocker le
+caractère a dans une variable de type char, revient à stocker en réalité la
+valeur 97.
+1.1 LES CONSTANTES CARACTERES
+Les constantes caractères correspondant à des caractères imprimables se
+notent de façon classique, en écrivant entre apostrophes (ou quottes) le caractère
+voulu. Par exemple :
+’a’ ’Y’ ’+’ ’$’
+Certains caractères non imprimables possèdent une représentation conventionnelle
+utilisant le caractère antislah (n). On peut également utiliser directement
+le code ASCII du caractère en l’exprimant, toujours à la suite du
+caractère antislah :
+– Soit sous forme octale
+– Soit sous forme hexadécimale précédée de X.
+Exemples :
+’na’ ’nx41’ ’n101’ ’nn’
+’nx0d’ ’nx15’ ’n015’ ’n007’
+1.2 LES VARIABLES CARACTERES
+Les variables de type caractère doivent être déclarées, par exemple :
+char a, b, c ;
+char code1 =’X’ ;
+char code2 = ’ !’ ;
+On peut créer des constants caractères symboliques en utilisant la directive
+#define ou le mot clé const.
+#define ix ’x’
+char code1 = ix ;
+const char A = ’Z’
+M GAYE 2
+École Supérieure Polytechnique Langage C
+2 LES CHAINES
+Les variables de type char ne peuvent recevoir qu’un caractère, leur utilisation
+est donc limitée. Il n’existe pas de type de donnée pour les chaînes
+de caractères. En langage C, les chaînes de caractères sont des tableaux de
+caractères suivi d’un 0. Leur manipulation est donc analogue à celle d’un
+tableau à une dimension.
+2.1 DECLARATION D’UNE CHAINE CARACTERES
+Syntaxe :
+char nom_chaine [dim] ;
+Le compilateur réserve (dim-1) places en mémoire pour la chaîne de caractères
+: En effet, il ajoute toujours le caractère NUL (’n0’) à la fin de la chaîne
+en mémoire.
+Exemple :
+char texte[20] ;
+Cette déclaration permettra d’enregistrer des chaînes de 19 caractères maximum
+(201 et le 0 de fin de chaîne). D’autre part, il est possible de déclarer
+une chaîne de caractères sans en spécifier la longueur de départ :
+char chaine[ ] = "Elvis" ;
+Cette déclaration crée et initialise chaîne ; le compilateur ajoute automatiquement
+le caractère nul à la fin de la chaîne et calcule la taille de celle-ci.
+On peut aussi faire une initialisation comme suit :
+char chaine[10] = {’E’, ’l’, ’v’, ’i’, ’s’, ’n0’} ;
+Le caractère NUL permet aux fonctions qui manipulent des chaînes de caractères
+de connaître la longueur de la chaîne.
+2.2 AFFICHAGE ET LECTURE DES CHAINES DE CARACTERES
+Plusieurs possibilités de lecture ou d’écriture de chaînes sont offertes par
+le langage C :
+– Format %s pour les entrées et sorties formatées (printf et sanf),
+– Les entrees et sorties non formatées (gets et puts).
+Exemple 1 :
+include <stdio.h>
+int main() {
+M GAYE 3
+École Supérieure Polytechnique Langage C
+char t1[5]="Dakar" ; //sans ’n0’
+char t2[]="Dakar" ; //avec ’n0’
+printf("t1 (de taille %i)=%s",sizeof(t1)/sizeof(char),t1) ;
+printf("t2 (de taille %i)=%s",sizeof(t2)/sizeof(char),t2) ;
+return 0 ;
+}
+Exemple 2 :
+include <stdio.h>
+int main(void){
+char nom[2O], prenom[20], ville[25] ;
+printf ("votre ville : ") ;
+gets (ville) ;
+printf ("votre nom et votre prénom : ") ;
+scanf ("%s %s", nom, prenom) ;
+printf ("bonjour Mr %s %s qui habitez à ", prenom, nom) ;
+puts (ville) ;
+return 0 ;
+}
+scanf VS gets
+– %s de la function scanf : on utilise les délimiteurs "habituels" (l’espace
+ou la fin de ligne). Il n’est possible de lire une chaîne contenant des
+espaces.
+– gets : seule la fin de ligne sert de délimiteur. De plus, contrairement
+à ce qui se produit avec scanf, il est possible de lire une chaîne des
+caractères espaces
+
+ Remarques :
+Dans les appels des fonctions scanf et puts, les identificateurs de tableau
+comme nom, prenom ou ville n’ont pas besoin d’être précédés de l’opérateur
+& puisqu’ils représentent déjà des adresses.
+2.3 LES FONCTIONS DE MANIPULATION DES CHAINES
+DE CARACTERES
+Le langage C dispose de nombreuses fonctions de manipulation de chaînes
+qui se trouvent dans la bibliothèque string:h ou stdlib:h.
+– strlen retourne la longueur d’une chaîne dont on lui a transmis l’adresse
+en valeur.
+– strcat(ch1; ch2) recopie la seconde chaîne ch2 à la suite de la première
+ch1.
+– strncat(ch1; ch2; lgmax) travaille de la même façon que strcat en offrant
+un contrôle sur le nombre de caractères qui seront concaténés à
+la chaine ch2.
+M GAYE 4
+École Supérieure Polytechnique Langage C
+– strcmp(ch1; ch2) compare deux chaînes et retourne une valeur entière
+positive si ch1 > ch2, nulle si ch1 = ch2 et négative si ch1 < ch2.
+– strncmp(ch1; ch2; lgmax) comme strcmp mais elle limite la comparaison
+au nombre lgmax de caractères.
+– stricmp(ch1; ch2) et strnicmp(ch1; ch2; lgmax) travaillent comme strcmp
+et strncmp mais sans tenir compte de la différence entre majuscules
+et minuscules.
+– strcpy(destin; source) recopie la chaîne source dans l’emplacement
+d’adresse destin.
+– strncpy(destin; source; lgmax) limite la copie au nombre de caractères
+lgmax.
+– strchr(ch; caractre) recherche dans ch, la première position où apparait
+le caractère mentionné.
+– strrchr(ch; caractre) comme strchr mais parte de la fin de ch ;
+– strstr(ch; ssch) recherche dans ch la première occurrence de la sous
+chaîne ssch.
+M GAYE 5

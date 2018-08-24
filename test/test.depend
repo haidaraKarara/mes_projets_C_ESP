@@ -1,0 +1,15 @@
+# depslib dependency file v1.0
+1435877675 source:e:\cccccc\test\main.c
+	<stdio.h>
+	<stdlib.h>
+
+1436134288 source:e:\cccccc\test\matrice.c
+	"matrice.h"
+
+1436134410 e:\cccccc\test\matrice.h
+
+1436134449 source:e:\cccccc\test\controle_saisie.c
+	"controle_saisie.h"
+
+1436134410 e:\cccccc\test\controle_saisie.h
+

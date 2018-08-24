@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1437450361 source:e:\cccccc\la_base\main.c
+	<stdio.h>
+	<stdlib.h>
+	<errno.h>
+

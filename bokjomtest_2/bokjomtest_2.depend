@@ -1,0 +1,14 @@
+# depslib dependency file v1.0
+1437414295 source:e:\cccccc\bokjomtest_2\main.c
+	<stdio.h>
+	<conio.h>
+	<string.h>
+
+1437414228 source:e:\cccccc\bokjomtest_2\membre.c
+	"Membre.h"
+
+1437414256 e:\cccccc\bokjomtest_2\membre.h
+	<stdio.h>
+	<conio.h>
+	<stdlib.h>
+

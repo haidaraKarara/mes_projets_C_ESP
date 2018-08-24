@@ -1,0 +1,6 @@
+CONTRAINTES A RESOUDRE :
+	1)	Comment faire pour contrôler la saisie des lettres à la place
+		des chiffres .	
+	2)	Comment faire les tableaux matrices avec les pointeurs.
+										
+	3)	
